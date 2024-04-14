@@ -4,6 +4,7 @@ const data=[
     ["战争片","我是战士",60],
 ];
 
+
 function createTable(data){
     var table=document.getElementById("ta");
     while (table.rows.length > 1) {
@@ -18,8 +19,8 @@ function createTable(data){
             cell.innerHTML=data[i][j];
         }
         cell=row.insertCell();
-        cell.innerHTML='<a href="javascript:void(0);" onclick="changeTr(this);">修改</a>&nbsp&nbsp'
-        +'<a href="javascript:void(0);" onclick="delTr(this);">删除</a>';
+        cell.innerHTML='<a href="javascript:void(0);" onclick="changeTr(this,'+i+');">修改</a>&nbsp&nbsp'
+        +'<a href="javascript:void(0);" onclick="delTr('+i+');">删除</a>';
     }
 }
 
@@ -44,4 +45,36 @@ function toggleRow(checkbox){
     }else{
         row.classList.remove('select');
     }
+}
+
+function changeTr(link,num){
+    var row=link.parentNode.parentNode;
+    var cells=row.cells;
+
+    cells[1].innerHTML="<input type='text' value='" + data[num][0]+ "'/>";
+    cells[2].innerHTML="<input type='text' value='" + data[num][1]+ "'/>";
+    cells[3].innerHTML="<input type='text' value='" + data[num][2]+ "'/>";
+
+    cells[4].innerHTML='<a href="javascript:void(0);" onclick="save(this,'+num+');">保存</a>&nbsp&nbsp'
+    +'<a href="javascript:void(0);" onclick="cancel();">取消</a>';
+}
+
+function save(link,num){
+    var row=link.parentNode.parentNode;
+    var cells=row.cells;
+
+    var input_value=[cells[1].querySelector('input').value,cells[2].querySelector('input').value,cells[3].querySelector('input').value];
+
+    data[num]=input_value;
+    createTable(data);
+
+}
+
+function cancel(){
+    createTable(data);
+}
+
+function delTr(num){
+    data.splice(num,1);
+    createTable(data);
 }

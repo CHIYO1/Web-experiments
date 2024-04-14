@@ -16,3 +16,16 @@ th, td {
 th{
     background-color: rgb(139, 156, 171);
 }
+
+tr:hover{
+    background-color: rgb(173, 191, 208);
+}
+
+input[type='text']{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(200, 214, 227);
+    border-radius: 10px;
+    border-color: rgb(184, 197, 210);
+    text-align: center;
+}
