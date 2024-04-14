@@ -1,0 +1,39 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    height: 50px;
+    background-color: rgb(241, 242, 242);
+    border-top: 2px #cac9c9a5 solid;
+    border-bottom: 2px #cac9c9a5 solid;
+}
+
+ul{
+    height: 50px;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    line-height: 50px;
+}
+li{
+    text-align: center;
+    width: 150px; 
+}
+.box{
+    background-color: rgb(241, 242, 242);
+    visibility: hidden;
+}
+a{
+    text-decoration: none;
+    color: #353535;
+    display: block; 
+}
+a:hover{
+    background-color: rgb(219, 237, 249);
+}
+li:hover .box{
+     visibility:visible;
+ }

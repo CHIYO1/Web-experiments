@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function show(){
+            ran = document.getElementById("ran");
+            num = document.getElementById("num");
+            num.value = ran.value;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>请输入您的邮箱地址：</td>
+                <td><input type="text" size="30" placeholder="输入邮箱地址"></td>
+            </tr>
+            <tr>
+                <td>请输入一个网址：</td>
+                <td><input type="text" size="30" placeholder="输入网址"></td>
+            </tr>
+            <tr>
+                <td>请输入数字：</td>
+                <td><input type="text" size="10"></td>
+            </tr>
+            <tr>
+                <td>数字滑动条：</td>
+                <td>
+                    <input type="range" id="ran" min="0" max="100" step="1" value="0" onchange="show()"/>
+                    <input type="text" id="num"/>
+                </td>
+            </tr>
+            <tr>
+                <td>请输入日期：</td>
+                <td><input type="text" size="30" value=" 年 / 月 / 日"></td>
+            </tr>
+            <tr>
+                <td>请选择颜色：</td>
+                <td><input type="color"></td>
+            </tr>
+            <tr>
+                <td>请选择招式：</td>
+                <td>
+                    <select size="1" style="width: 200px;">
+                        <option hidden>    </option>
+                        <option>亢龙有悔</option>
+                        <option>飞龙在天</option>
+                        <option>见龙在田</option>
+                        <option>神龙摆尾</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit">提交</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

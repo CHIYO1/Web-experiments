@@ -1,0 +1,125 @@
+.d1{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border: 2px rgb(228, 181, 51) solid;
+}
+
+.d1-1{
+    text-align: center;
+    height: 90%;
+    width: 18%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    overflow: hidden;
+}
+
+.d1-1 img{
+    width: 100%;
+    height: 150px;
+    object-fit:fill;
+}
+
+.d1-1 p{
+    margin-top: 0px;
+}
+
+.d2{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.d2-1{
+    height: 100%;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border: 2px rgb(228, 181, 51) solid;
+    background-image: url('实验9-素材/bg01.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 20%;
+}
+
+.d2-2{
+    height: 100%;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border: 2px rgb(228, 181, 51) solid;
+    background-image: url('实验9-素材/bg02.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 20%;
+}
+
+.p1{
+    margin-left: 90px;
+    font-weight: bold;
+}
+
+.dd2{
+    display: flex;
+    margin: 2%;
+    margin-top: 4%;
+    text-indent:2em;
+    margin-bottom: 0%;
+}
+
+.dd2 img{
+    border: 2px black solid;
+    height: 150px;
+    height: 150px;
+}
+
+.d3{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.d3-1{
+    height: 100%;
+    width: 222px;
+    margin-left: 1%;
+    margin-right: 1%;
+    border: 2px rgb(228, 181, 51) solid;
+    background: url('实验9-素材/arrow.gif') no-repeat 2% 3%,
+                url('实验9-素材/bg03.gif') no-repeat;
+}
+
+.d3-2{
+    height: 100%;
+    width: 88%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border: 2px rgb(228, 181, 51) solid;
+    background-image: url('实验9-素材/bg05.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 20%;
+}
+
+.p2{
+    margin-top: 5px;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.p3{
+    margin-top: 10px;
+    margin-left: 85px;
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+}
+
+.pp{
+    text-indent:2em;
+    font-size: 15px;
+}

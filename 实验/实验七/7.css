@@ -1,0 +1,32 @@
+.nav{
+    background-image: url('bgimage.png');
+    height: 272px;
+    width: 947px;
+}
+
+ul{
+    list-style: none;
+    padding-top:64px;
+    padding-left:15px
+}
+
+li div{
+    background-color: #669966;
+    width: 130px;
+    padding-right: 20px;
+    height: 30px;
+    color: #f1c644;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px white dashed;
+    border-left:10px solid rgb(255,153,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+li:hover div{
+    background-color: #527d52;
+    border-left:10px solid rgb(230, 140, 3);
+}

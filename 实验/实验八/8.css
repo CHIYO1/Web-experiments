@@ -1,0 +1,21 @@
+table{
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    border-top: 1px rgb(230, 229, 226) solid;
+    border-left: 1px rgb(230, 229, 226) solid;
+}
+
+
+td{
+    border-bottom: 1px rgb(230, 229, 226) solid;
+    border-right: 1px rgb(230, 229, 226) solid;
+}
+
+table tr:nth-child(even){
+    background-color: rgb(199, 201, 201);
+}
+
+table tr:hover{
+    background-color: rgb(227, 121, 75);
+}

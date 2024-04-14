@@ -1,0 +1,29 @@
+div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.c1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c1 img{
+    height: 125px;
+    width: 215px;
+}
+
+button{
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 45px;
+    width: 60px;
+    background-color: rgb(145, 234, 234);
+    color: rgb(13, 102, 102);
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+}

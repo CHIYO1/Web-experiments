@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .input{
+                height: 50px;
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">用户注册</h1>
+        <hr align="center" size="3" color="black" width="520px"/>
+        <form >
+            <table align="center" frame="void">
+                <tr>
+                    <td width="100">用户名:</td>
+                    <td><input type="text" size="30" placeholder="请输入用户名" style="width: 240px; height: 30px; border-radius: 10px; border: dashed 1px; text-align: center;" ></td>
+                </tr>
+                <tr>
+                    <td>邮箱地址:</td>
+                    <td><input type="text" size="30" placeholder="请输入邮箱地址" style="width: 240px; height: 30px; border-radius: 10px; border: dashed 1px; text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td>设置密码:</td>
+                    <td>
+                        <input type="password" size="30" style="width: 240px; height: 30px; border-radius: 10px; border: dashed 1px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <text style="font-size: small; color: #4d4c4c;">6-20个字符，由字母、数字和符号的两种以上组合</text>
+                    </td>
+                </tr>
+                <tr>
+                    <td>确认密码:</td>
+                    <td>
+                        <input type="password" size="30" style="width: 240px; height: 30px; border-radius: 10px; border: dashed 1px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>真实姓名:</td>
+                    <td><input type="text" size="30" placeholder="请输入真实姓名" style="width: 240px; height: 30px; border-radius: 10px; border: dashed 1px; text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td>您的性别</td>
+                    <td>
+                        <input type="radio" name="sex"/>男
+                        <input type="radio" name="sex"/>女
+                    </td>
+                </tr>
+                <tr>
+                    <td>上传头像:</td>
+                    <td><input type="file" accept="image/*"></td>
+                </tr>
+                <tr>
+                    <td>您的手机:</td>
+                    <td><input type="text" size="30" placeholder="请输入您的手机号" style="width: 240px; height: 30px; border-radius: 10px; border: dashed 1px; text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td>单位名称:</td>
+                    <td><input type="text" size="30" placeholder="请输入单位名称" style="width: 240px; height: 30px; border-radius: 10px; border: dashed 1px; text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td>单位地址:</td>
+                    <td>
+                        <select size="1" style="width: 100px;">
+                            <option hidden>请选择省份</option>
+                            <option>广东</option>
+                            <option>北京</option>
+                            <option>上海</option>
+                            <option>广西</option>
+                        </select>
+                        <select size="1" style="width: 100px;">
+                            <option hidden>请选择城市</option>
+                            <option>广州</option>
+                            <option>顺德</option>
+                            <option>佛山</option>
+                            <option>清远</option>
+                        </select>
+                        <select size="1" style="width: 100px;">
+                            <option  hidden>请选择区</option>
+                            <option>南海区</option>
+                            <option>禅城区</option>
+                            <option>三水区</option>
+                            <option>高明区</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" size="30" placeholder="请输入街道地址" style="width: 240px; height: 30px; border-radius: 10px; border: dashed 1px; text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td>您的爱好</td>
+                    <td colspan="2" >
+                        <input type="checkbox" name="ho"/>购物
+                        <input type="checkbox" name="ho"/>影视
+                        <input type="checkbox" name="ho"/>餐饮
+                    </td>
+                </tr>
+                <tr>
+                    <td>协议内容:</td>
+                    <td>
+                        <textarea rows="4" cols="40" style="border-radius: 10px; border: dashed 1px;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">提交</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+
