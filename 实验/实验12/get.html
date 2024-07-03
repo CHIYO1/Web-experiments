@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        addEventListener("DOMContentLoaded",function get(){
+            var params = new URLSearchParams(location.search); 
+            var table = document.getElementById("mytable");
+
+            params.forEach(function(value, key) { 
+                var row = table.insertRow(); 
+                var cell1 = row.insertCell();
+                var cell2 = row.insertCell(); 
+                cell1.textContent = key + ":"; 
+                cell2.textContent = value; 
+            });
+        })
+    </script>
+
+<style>
+    table{
+        text-align: center;
+        font-size: larger;
+        border: 2px solid;
+        width: 400px;
+        height: 200px;
+    }
+</style>
+</head>
+<body>
+    <table id="mytable"></table>
+</body>
+</html>

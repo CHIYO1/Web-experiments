@@ -1,0 +1,108 @@
+.box{
+    width: 600px;
+    height: 40px;
+    background-color: #FF0000;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px #232;
+    border: 1px solid #FF0000;
+}
+
+.play{
+    float: left;
+    width: 0;
+    height: 0;
+    border-left: 15px solid #FFF;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-top: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.pause{
+    float: left;
+    width: 8px;
+    height: 20px;
+    border-left: 4px solid #FFF;
+    border-right: 4px solid #FFF;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.progress{
+    float: left;
+    width: 400px;
+    height: 8px;
+    background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    margin-top: 16px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 2px 2px #132;
+    position: relative;
+}
+
+.bar{
+    width: 30%;
+    height: 30%;
+    background-color: #ccc;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.control{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    box-shadow: 1px 1px 2px 2px #132;
+}
+
+.sound{
+    width: 10px;
+    height: 8px;
+    border-right: 12px solid #FFF;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    float: left;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+.soundoff{
+    width: 10px;
+    height: 8px;
+    border-right: 15px solid #CCC;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    float: left;
+    margin-top: 8px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.full{
+    width: 15px;
+    height: 15px;
+    border: 3px solid #FFF;
+    float: left;
+    margin-top: 12px;
+    margin-left: 80px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.full:hover{
+    width: 20px;
+    height: 20px;
+    border: 3px solid #CCC;
+    float: left;
+    margin-top: 10px;
+}

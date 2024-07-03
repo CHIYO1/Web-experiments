@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            border: 2px solid;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+        td,th{
+            border:  2px solid;  
+        }
+        th{
+            height: 50px;
+            background-color: aliceblue;
+        }
+        td{
+            height: 200px;
+        }
+
+        .AA,.BB,.CC{
+            width: 33%;
+        }
+    </style>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.src);
+        }
+
+        function drop(event){
+            event.preventDefault();
+            var path = event.dataTransfer.getData("text");
+            event.target.innerHTML+="<img src="+path+" ondragstart='drag_del(event)' draggable='true' >";
+        }
+
+        function drag_del(ev){
+            event.dataTransfer.setData("text", event.target.src);
+            ev.dataTransfer.setData("customer", ev.target.parentNode.className);
+        }
+
+        function drop_del(ev){
+            ev.preventDefault();
+            var path = ev.dataTransfer.getData("text");
+            var cus = ev.dataTransfer.getData("customer");
+
+            var customerArea = document.querySelector("."+cus);
+            var imgs = customerArea.getElementsByTagName("img");
+            for (var i = 0; i < imgs.length; i++) {
+                if (imgs[i].src === path) {
+                    imgs[i].remove();
+                    break;
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <table id="order">
+        <caption>请将选择的菜品和果品拖拽到顾客下方区域</caption>
+        <tr>
+            <th class="A">顾客A</th>
+            <th class="B">顾客B</th>
+            <th class="C">顾客C</th>
+        </tr>
+        <tr>
+            <td class="AA" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td class="BB" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            <td class="CC" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        </tr>
+    </table>
+
+    <table id="menu">
+        <tr>
+            <th>可选择的菜品及果品</th>
+            <th class="del">删除</th>
+        </tr>
+        <tr>
+            <td>
+                <img src="img\1.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\2.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\3.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\4.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\5.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\6.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\7.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\8.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\9.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\10.JPG" ondragstart="drag(event)" draggable="true">
+                <img src="img\11.JPG" ondragstart="drag(event)" draggable="true">
+            </td>
+            <td class="del">
+                <img src="img\12.JPG" draggable="false" ondrop="drop_del(event)" ondragover="allowDrop(event)">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

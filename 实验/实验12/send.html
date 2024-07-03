@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            height: 250px;
+            width: 800px;
+            margin-top: 50px;
+            margin-left: 300px;
+        }
+
+        table tr{
+            border: none;
+        }
+        table td{
+            text-align: center;
+        }
+        input[type="text"]{
+            height: 30px;
+            width: 500px;
+
+        }
+    </style>
+
+    <script>
+        function submitForm(){
+            var sid=document.getElementById("学号").value;
+            var sname=document.getElementById("姓名").value;
+            var ssex=document.getElementsByName("性别");
+            var sex;
+            for(var i=0;i<ssex.length;++i){
+                if(ssex[i].checked){
+                    sex=ssex[i].value;
+                }
+            }
+            var file=document.getElementById("文件名").value;
+            var URL="get.html?学号="+sid+"&姓名="+sname+"&性别="+sex+"&文件名="+file;
+            window.location.href=URL;
+        }
+    </script>
+
+    
+</head>
+<body>
+    <form action="get.html" method="get">
+        <table border="2px solid">
+            <caption>表单参数提交数据</caption>
+            <tr>
+                <td>学号：</td>
+                <td><input type="text" name="学号" placeholder="请输入学号"></td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" name="姓名" placeholder="请输入姓名"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input type="radio" name="性别" value="male">男
+                    <input type="radio" name="性别" value="female">女
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+    <form action="get.html" method="get">
+        <table border="2px solid">
+            <caption>URL参数提交数据</caption>
+            <tr>
+                <td>学号：</td>
+                <td><input type="text" id="学号" placeholder="请输入学号"></td>
+            </tr>
+            <tr>
+                <td>姓名：</td>
+                <td><input type="text" id="姓名" placeholder="请输入姓名"></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input type="radio" name="性别" value="male">男
+                    <input type="radio" name="性别" value="female">女
+                </td>
+            </tr>
+            <tr>
+                <td>文件：</td>
+                <td><input type="file" id="文件名"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" onclick="submitForm()" value="提交">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    
+</body>
+</html>

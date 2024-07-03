@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height: 100%;width: 100%; text-align: center;"><h1>WELCOME</h1></div>
+    <script>
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+
+        if (!isLoggedIn) {
+            alert('请先登录');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
